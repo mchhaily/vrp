@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Routing Vehicles on Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="css/leaflet.css" />        
+        <script type="text/javascript" src="js/leaflet.js?v=0.7.2"></script>
+        <link rel="stylesheet" href="css/Leaflet.Elevation-0.0.2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/Leaflet.Elevation-0.0.2.min.js"></script>        
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>        
+        <script type="text/javascript" src="js/jquery.history.js"></script>
+        <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+        <script type="text/javascript" src="js/ghrequest.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>         
+    </head>
+    <body>
+        
+        <!-- Left panel section-->  
+        <div id="input">
+            <div id="input_header">
+                <div id="header_img">
+                    <img alt="Vehicle Routing" src="./img/header.png"/> <!-- To Change Image -->                   
+                </div>
+                <div id="options">
+                    <!-- Vehicle icon -->
+                    <span id="vehicles">
+                    </span>
+                </div>
+                
+                <!-- Input form: location coordinates -->
+                <form id="locationform">
+                    <input id="loadXMLButton" type="submit" value="Load from XML">
+                    <input id="saveXMLButton" type="submit" value="Save to XML">
+                    <label id="listHeader">Depot</label>
+                    <input id="addButton" type="submit" value="+" name="addDepotBtn">
+                    <div class="clear"> </div>
+                    <input id="listView" type="text">
+                    <div class="clear"> </div>
+                    <label id="listHeader">Customers</label>
+                    <input id="addButton" type="submit" value="+" name="addDepotBtn">
+                    <div class="clear"> </div>
+                    <input id="listView" type="text">
+                    <div class="clear"> </div>
+                    <label id="listHeader">Vehicles</label>
+                    <input id="addButton" type="submit" value="+" name="addDepotBtn">
+                    <div class="clear"> </div>
+                    <input id="listView" type="text">
+                    <div class="clear"> </div>
+                    
+                    <input id="solveButton" type="submit" value="Solve">
+                   
+                </form>
+            </div>
+        
+   
+        </div>
+        
+        <!-- Map section
+            set style via JS
+        -->  
+        <div id="map">
+        </div>
+    </body>
+</html>

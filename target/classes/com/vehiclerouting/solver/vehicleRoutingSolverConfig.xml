@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <!--<environmentMode>FAST_ASSERT</environmentMode>-->
+  <solutionClass>com.web.vehiclerouting.optaplanner.domain.VehicleRoutingSolution</solutionClass>
+  <planningEntityClass>com.web.vehiclerouting.optaplanner.domain.Customer</planningEntityClass>
+  <planningEntityClass>com.web.vehiclerouting.optaplanner.domain.Standstill</planningEntityClass>
+
+  <scoreDirectorFactory>
+    <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+    <!--<simpleScoreCalculatorClass>com.web.vehiclerouting.optaplanner.solver.score.VehicleRoutingSimpleScoreCalculator</simpleScoreCalculatorClass>-->
+    <!--<incrementalScoreCalculatorClass>com.web.vehiclerouting.optaplanner.solver.score.VehicleRoutingIncrementalScoreCalculator</incrementalScoreCalculatorClass>-->
+    <scoreDrl>/com/web/vehiclerouting/optaplanner/solver/vehicleRoutingScoreRules.drl</scoreDrl>
+    <!--<assertionScoreDirectorFactory>-->
+      <!--<simpleScoreCalculatorClass>com.web.vehiclerouting.optaplanner.solver.score.VehicleRoutingSimpleScoreCalculator</simpleScoreCalculatorClass>-->
+    <!--</assertionScoreDirectorFactory>-->
+  </scoreDirectorFactory>
+
+  <termination>
+    <maximumMinutesSpend>5</maximumMinutesSpend>
+  </termination>
+  <constructionHeuristic>
+    <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+  </constructionHeuristic>
+  <localSearch>
+    <unionMoveSelector>
+      <changeMoveSelector/>
+      <swapMoveSelector/>
+      <subChainChangeMoveSelector>
+        <selectReversingMoveToo>true</selectReversingMoveToo>
+      </subChainChangeMoveSelector>
+      <subChainSwapMoveSelector>
+        <selectReversingMoveToo>true</selectReversingMoveToo>
+      </subChainSwapMoveSelector>
+    </unionMoveSelector>
+    <acceptor>
+      <lateAcceptanceSize>200</lateAcceptanceSize>
+    </acceptor>
+    <forager>
+      <acceptedCountLimit>1</acceptedCountLimit>
+    </forager>
+  </localSearch>
+</solver>

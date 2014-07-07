@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Routing Vehicles on Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="css/leaflet.css" />        
+        <script type="text/javascript" src="js/leaflet.js?v=0.7.2"></script>
+        <link rel="stylesheet" href="css/Leaflet.Elevation-0.0.2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/popup.css" />
+        
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/Leaflet.Elevation-0.0.2.min.js"></script>        
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>        
+        <script type="text/javascript" src="js/jquery.history.js"></script>
+        <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+        <script type="text/javascript" src="js/ghrequest.js"></script>
+        <script type="text/javascript" src="js/popup.js"></script>  
+        <script type="text/javascript" src="js/main.js"></script>  
+    </head>
+    
+        
+        <!-- Left panel section-->  
+        
+        <div id="input">
+            <div id="input_header">
+                <div id="topPan">
+                    <ul>
+                        <li class="menupadding" ><a href="index.html"><img src="img/folder.png" alt="folder"></a></li>
+                        <li class="menupadding"><a href="customer.html"><img src="img/customer.png" alt="customer"></a></li>
+                        <li class="menupadding"><a href="vehicle.html"><img src="img/truck.png" alt="Vehicle"></a></li> 
+                        <li class="home"><img src="img/setting.png" alt="Setting"></li>
+                        <li class="menupadding"><a href="about-us.html"><img src="img/info.png" alt="About us"></a></li>
+                    </ul>
+                </div>
+                         
+                <div id="options">
+                    <!-- Vehicle icon -->
+                    <!--<span id="vehicles">
+                    </span> -->
+                </div>
+                
+                <!-- Input form: location coordinates -->
+                <form id="locationform">
+                    <h4>Setting</h4>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Map section
+            set style via JS
+        -->  
+        <div id="map">
+        </div>
+        <!-- OUTPUT SECTION AT THE BOTTOM OF THE SCREEN -->
+        <div id="output">
+            <p>Test test stes taws tatasd</p>
+            <label> test 12</label>
+            <input id="solveButton" type="submit" value="Solve">
+        </div>
+        
+        
+        <div id="toPopup"> 
+            <!--<div class="close"></div>-->
+            <div id="popup_content"> 
+               <!-- <label>Name</label>
+                <input id="popupCustName" name="customer" type="text" placeholder = "Customer"><br/>
+                <label id="popupAddress">Address</label><br>
+                <label>Demand</label>
+                <input id="popupDemand" name="demand" type="text" placeholder = "Demand"><br/>
+                <input class="save" type="submit" name="addCustomer" value="Save"> -->
+            </div>
+        </div> 
+        <div class="loader"></div>
+   	<div id="backgroundPopup"></div>
+        <!-- Piwik -->
+        <script type="text/javascript">
+            PIWIK = false;
+            if (PIWIK) {
+                var _paq = _paq || [];
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+                (function() {
+                    var u = (("https:" == document.location.protocol) ? "https" : "http") + "://graphhopper.com/piwik/";
+                    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                    _paq.push(['setSiteId', 1]);
+                    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                    g.type = 'text/javascript';
+                    g.defer = true;
+                    g.async = true;
+                    g.src = u + 'piwik.js';
+                    s.parentNode.insertBefore(g, s);
+                })();
+            }
+        </script>
+        <noscript><p><img src="http://graphhopper.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Piwik Code -->
+    
+</html>
